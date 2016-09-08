@@ -6,11 +6,12 @@
   Allow to use more Allure options ( test descr, features, stories, environment, arguments, severity, issue, subSteps, attachments )
 
 
-  Added event listener :
+**  Added event listener :
 
   ----------
 
-  - test:meta  :  manage testcase meta-data for allure
+*** test:meta  :  manage testcase meta-data for allure
+
 
   >   meta : {
 
@@ -36,7 +37,8 @@
       
   ----------
 
-  - step:start   : start a new sub step
+*** step:start   : start a new sub step
+
 
   >   start : {
 
@@ -46,7 +48,8 @@
   
   ----------
 
-  - step:end   :  close current step
+*** step:end   :  close current step
+
 
   >   end : {
 
@@ -56,7 +59,7 @@
 
   ----------
 
-  - test:attach   : attach resource to test 
+*** test:attach   : attach resource to test 
 
   >  attachment : {
 
@@ -74,7 +77,8 @@
 
   ----------
 
-  - test:log   : log message with optional details
+*** test:log   : log message with optional details
+
 
   >  log : {
 
@@ -90,11 +94,13 @@
 
   ----------
 
-- Install reporter with npm
+** Install reporter with npm
 
 > npm install wdio-allure-addons-reporter --save
   
-- Usage wdio.conf.js :
+  
+** Usage wdio.conf.js :
+
 
   >    reporters: [..., 'allure-addons'],
 
