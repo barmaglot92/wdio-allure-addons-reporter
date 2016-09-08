@@ -68,6 +68,12 @@ var AllureReporter = (function (_events$EventEmitter) {
 
         this.baseReporter = baseReporter;
         this.config = config;
+        if( this.config && this.config.debug ) {
+          debug=true;
+        }
+        if( this.config && this.config.debugSeleniumCommand ) {
+          debugSeleniumCommand=true;
+        }
         this.options = options;
         this.allures = {};
 
@@ -295,7 +301,7 @@ var AllureReporter = (function (_events$EventEmitter) {
         });
 
         /*
-          attachment : {
+          log : {
             cid: ...,
             event: 'test:log',
             message: string,
