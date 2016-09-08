@@ -1,6 +1,5 @@
 
-  Welcome to WDIO-ALLURE-ADDONS-REPORTER
-  ===================
+* Welcome to WDIO-ALLURE-ADDONS-REPORTER
 
   Based on wdio-allure-reporter
 
@@ -65,3 +64,19 @@
   >  }
 
   ----------
+
+- Install reporter with npm
+
+> npm install wdio-allure-addons-reporter --save
+  
+- Usage wdio.conf.js :
+
+  >    reporters: [..., 'allure-addons'],
+  >    reporterOptions: {
+  >        'outputDir': 'outputDir',
+  >        'allure-addons': {
+  >            outputDir: 'allure-results',
+  >            debug: true,
+  >            debugSeleniumCommand: true
+  >        }
+  >    }, 
