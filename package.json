@@ -1,34 +1,64 @@
 {
-  "name": "wdio-allure-addons-reporter",
-  "version": "0.0.2",
-  "description": "A WebdriverIO plugin. Report results in Allure format.",
-  "main": "index.js",
-  "scripts": {
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/evrycollin/wdio-allure-addons-reporter"
-  },
-  "directories": {
-  },
-  "keywords": [
-    "allure",
-    "reporter",
-    "webdriverio",
-    "wdio",
-    "wdio-plugin",
-    "wdio-reporter"
+  "_args": [
+    [
+      {
+        "raw": "wdio-allure-addons-reporter@0.0.2",
+        "scope": null,
+        "escapedName": "wdio-allure-addons-reporter",
+        "name": "wdio-allure-addons-reporter",
+        "rawSpec": "0.0.2",
+        "spec": "0.0.2",
+        "type": "version"
+      },
+      "D:\\orchestra\\listedenaissance"
+    ]
   ],
-  "author": "Evry COLLIN <evry.collin@gmail.com>",
-  "license": "MIT",
+  "_from": "wdio-allure-addons-reporter@0.0.2",
+  "_id": "wdio-allure-addons-reporter@0.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/wdio-allure-addons-reporter",
+  "_nodeVersion": "4.4.7",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/wdio-allure-addons-reporter-0.0.2.tgz_1473317144378_0.0653893060516566"
+  },
+  "_npmUser": {
+    "name": "evry.collin",
+    "email": "evry.collin@gmail.com"
+  },
+  "_npmVersion": "3.10.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "wdio-allure-addons-reporter@0.0.2",
+    "scope": null,
+    "escapedName": "wdio-allure-addons-reporter",
+    "name": "wdio-allure-addons-reporter",
+    "rawSpec": "0.0.2",
+    "spec": "0.0.2",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/wdio-allure-addons-reporter/-/wdio-allure-addons-reporter-0.0.2.tgz",
+  "_shasum": "6363d5e413f3afde3d8ed56a4f097e21c9bc26af",
+  "_shrinkwrap": null,
+  "_spec": "wdio-allure-addons-reporter@0.0.2",
+  "_where": "D:\\orchestra\\listedenaissance",
+  "author": {
+    "name": "Evry COLLIN",
+    "email": "evry.collin@gmail.com"
+  },
   "bugs": {
     "url": "https://github.com/evrycollin/wdio-allure-addons-reporter/issues"
   },
-  "homepage": "https://github.com/evrycollin/wdio-allure-addons-reporter#readme",
+  "contributors": [],
   "dependencies": {
     "allure-js-commons": "^1.2.0",
     "babel-runtime": "^5.8.25"
   },
+  "description": "A WebdriverIO plugin. Report results in Allure format.",
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-core": "^5.8.23",
@@ -54,6 +84,36 @@
     "wdio-mocha-framework": "^0.3.5",
     "webdriverio": "^4.1.1"
   },
-  "contributors": [
-  ]
+  "directories": {},
+  "dist": {
+    "shasum": "6363d5e413f3afde3d8ed56a4f097e21c9bc26af",
+    "tarball": "https://registry.npmjs.org/wdio-allure-addons-reporter/-/wdio-allure-addons-reporter-0.0.2.tgz"
+  },
+  "gitHead": "0b0d7e720264c70c75b33f173fefab795575de9f",
+  "homepage": "https://github.com/evrycollin/wdio-allure-addons-reporter#readme",
+  "keywords": [
+    "allure",
+    "reporter",
+    "webdriverio",
+    "wdio",
+    "wdio-plugin",
+    "wdio-reporter"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "evry.collin",
+      "email": "evry.collin@gmail.com"
+    }
+  ],
+  "name": "wdio-allure-addons-reporter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evrycollin/wdio-allure-addons-reporter.git"
+  },
+  "scripts": {},
+  "version": "0.0.4"
 }

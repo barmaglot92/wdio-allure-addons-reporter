@@ -68,11 +68,9 @@ var AllureReporter = (function (_events$EventEmitter) {
 
         this.baseReporter = baseReporter;
         this.config = config;
-        if( this.config && this.config.debug ) {
-          debug=true;
-        }
-        if( this.config && this.config.debugSeleniumCommand ) {
-          debugSeleniumCommand=true;
+        if( options ) {
+          debug=options.debug;
+          debugSeleniumCommand=options.debugSeleniumCommand;
         }
         this.options = options;
         this.allures = {};
@@ -97,7 +95,7 @@ var AllureReporter = (function (_events$EventEmitter) {
         this.on('test:start', function (test) {
             var allure = _this.getAllure(test.cid);
             allure.startCase(test.title);
-
+            
             var currentTest = allure.getCurrentTest();
             currentTest.addParameter('environment-variable', 'capabilities', JSON.stringify(test.runner[test.cid]));
             currentTest.addParameter('environment-variable', 'spec files', JSON.stringify(test.specs));
@@ -181,6 +179,7 @@ var AllureReporter = (function (_events$EventEmitter) {
             logger('test:meta', meta);
             
             if (!_this.isAnyTestRunning(allure)) {
+                error('ERROR','test:meta : NO TEST RUNNING');
                 return;
             }
             var currentTest = allure.getCurrentTest();
@@ -249,7 +248,7 @@ var AllureReporter = (function (_events$EventEmitter) {
                   error('ERROR : meta.environment should be an object { name2: val1, name2: val2.. }', meta);                 
                 }
             }
-
+            
         });
 
         this.on('step:start', function (step) {
@@ -257,7 +256,7 @@ var AllureReporter = (function (_events$EventEmitter) {
             logger('step:start', step);
 
             if (!_this.isAnyTestRunning(allure)) {
-                error('cannot start step because no test is running',step);
+                error('ERROR','cannot start step because no test is running',step);
                 return;
             }
             allure.startStep(step.title!=null ? step.title : 'No name defined');
@@ -269,7 +268,7 @@ var AllureReporter = (function (_events$EventEmitter) {
             logger('step:end', step);
 
             if (!_this.isAnyTestRunning(allure)) {
-                error('cannot end step because no test is running',step);
+                error('ERROR','cannot end step because no test is running',step);
                 return;
             }
             allure.endStep(step.status!=null ? step.status : 'passed');
@@ -290,7 +289,7 @@ var AllureReporter = (function (_events$EventEmitter) {
             logger('test:attach', attachment);
 
             if (!_this.isAnyTestRunning(allure)) {
-                error('cannot attach because no test is running',attachment);
+                error('ERROR','cannot attach because no test is running',attachment);
                 return;
             }
             allure.addAttachment(
@@ -314,7 +313,7 @@ var AllureReporter = (function (_events$EventEmitter) {
             logger('test:log', log);
 
             if (!_this.isAnyTestRunning(allure)) {
-                error('cannot log because no test is running',log);
+                error('ERROR','cannot log because no test is running',log);
                 return;
             }
             var content = log.detail!=null ? JSON.stringify(log.detail, null, '    ') : '';
