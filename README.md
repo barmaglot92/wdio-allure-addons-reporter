@@ -5,9 +5,7 @@
 
 
 ## Added event listener :
-
-
-- test:meta  :  manage testcase meta-data for allure
+- `test:meta`  :  manage testcase meta-data for allure
 ```javascript
 meta : {
  (mandatory) cid : ...,
@@ -22,26 +20,21 @@ meta : {
 }
 ```
       
-
-- step:start   : start a new sub step
-
+- `step:start`   : start a new sub step
 ```javascript
 start : {
  (optional) title : string
 }
 ```
   
-
-- step:end   :  close current step
-
+- `step:end`   :  close current step
 ```javascript
 end : {
  (optional) status : passed, failed ( default : passed )
 }
 ```
 
-- test:attach   : attach resource to test 
-
+- `test:attach`   : attach resource to test 
 ```javascript
 attachment : {
   cid: ...,
@@ -52,8 +45,7 @@ attachment : {
 }
 ```
 
-- test:log   : log message with optional details
-
+- `test:log`   : log message with optional details
 ```javascript
 log : {
   cid: ...,
@@ -63,14 +55,13 @@ log : {
 }
 ```
 
-
 ## Install reporter with npm
 
 ```bash
 $ npm install wdio-allure-addons-reporter --save
 ```
   
-- Usage wdio.conf.js :
+- Usage `wdio.conf.js` :
 
 ```javascript
 reporters: [..., 'allure-addons'],
