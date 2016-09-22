@@ -1,7 +1,7 @@
 
 # Welcome to WDIO-ALLURE-ADDONS-REPORTER
 - Based on wdio-allure-reporter
--Allow to use more Allure options ( test descr, features, stories, environment, arguments, severity, issue, subSteps, attachments )
+- Allow to use more Allure options ( test descr, features, stories, environment, arguments, severity, issue, subSteps, attachments )
 
 
 ## Added event listener :
