@@ -8,7 +8,7 @@
 
 
 - test:meta  :  manage testcase meta-data for allure
-```json
+```javascript
 meta : {
  (mandatory) cid : ...,
  (mandatory) event : 'test:meta'
@@ -25,7 +25,7 @@ meta : {
 
 - step:start   : start a new sub step
 
-```json
+```javascript
 start : {
  (optional) title : string
 }
@@ -34,7 +34,7 @@ start : {
 
 - step:end   :  close current step
 
-```json
+```javascript
 end : {
  (optional) status : passed, failed ( default : passed )
 }
@@ -42,7 +42,7 @@ end : {
 
 - test:attach   : attach resource to test 
 
-```json
+```javascript
 attachment : {
   cid: ...,
   event: 'test:attach',
@@ -54,7 +54,7 @@ attachment : {
 
 - test:log   : log message with optional details
 
-```json
+```javascript
 log : {
   cid: ...,
   event: 'test:log',
@@ -72,7 +72,7 @@ $ npm install wdio-allure-addons-reporter --save
   
 - Usage wdio.conf.js :
 
-```json
+```javascript
 reporters: [..., 'allure-addons'],
 reporterOptions: {
     'outputDir': 'outputDir',
