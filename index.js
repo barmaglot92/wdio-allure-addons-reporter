@@ -324,6 +324,9 @@ var AllureReporter = (function (_events$EventEmitter) {
         
         
         this.on('runner:screenshot', function (command) {
+            if(!command.data) {
+                return;
+            }
             var allure = _this.getAllure(command.cid);
             allure.addAttachment('screenshot '+command.filename, new Buffer(command.data, 'base64'));
         });
